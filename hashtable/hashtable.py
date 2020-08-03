@@ -104,18 +104,10 @@ class HashTable:
         index = self.hash_index(key)
 
         if self.capacity[index] is None:
-            return None
-        for i in range(0, len(self.capacity[index])):
-            if self.capacity[index][i][0] == key:
-                self.capacity[index].pop(i)
-                return True
+            return False
 
-        # value = self.capacity[index]
-        # if value == None:
-        #     print('Key not found!')
-        # else:
-        #     value = None
-        #     return value
+        elif self.capacity[index] is not None:
+            self.capacity[index] = None
 
 
     def get(self, key):
