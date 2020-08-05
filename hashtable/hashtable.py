@@ -125,7 +125,7 @@ class HashTable:
         Implement this.
         """
         # Your code here
-        return self.stored / self.capacity
+        
 
     def fnv1(self, key):
         """
